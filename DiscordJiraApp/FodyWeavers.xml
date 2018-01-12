@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Copyright (c) 2018 Initial Servers LLC. All rights reserved.
+	https://initialservers.com/
+-->
+
+<Weavers>
+  <Costura IncludeDebugSymbols='false' DisableCompression='true'>
+    Newtonsoft.Json
+  </Costura>
+</Weavers>

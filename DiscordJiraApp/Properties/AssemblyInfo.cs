@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿// Copyright (c) 2018 Initial Servers LLC. All rights reserved.
+// https://initialservers.com/
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,11 +9,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DiscordJiraApp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Connects Jira issue tracking and Discord messages via WebHooks")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Initial Servers LLC.")]
 [assembly: AssemblyProduct("DiscordJiraApp")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Jonathan [Pwnoz0r] Rainier © 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +35,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("2018.1.12.0445")]
+[assembly: AssemblyFileVersion("2018.1.12.0445")]
