@@ -12,7 +12,7 @@ namespace DiscordJiraApp.Helpers
 {
     public class LoggerHelper
     {
-        public static void Write(LogType logType, object logMessage, bool logFile = false)
+        public static void Write(LogType logType, object logMessage)
         {
             var logTypeDescription = logType.GetAttributeOfType<DescriptionAttribute>().Description;
             var tempString =
@@ -21,7 +21,7 @@ namespace DiscordJiraApp.Helpers
 
             Console.WriteLine(tempString);
 
-            if (logFile || logType != LogType.Debug)
+            if (logType != LogType.Debug)
                 Log(logTypeDescription, tempString, assemblyName);
         }
 
