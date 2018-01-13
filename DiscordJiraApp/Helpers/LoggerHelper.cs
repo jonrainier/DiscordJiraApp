@@ -21,7 +21,7 @@ namespace DiscordJiraApp.Helpers
 
             Console.WriteLine(tempString);
 
-            if (logFile)
+            if (logFile || logType != LogType.Debug)
                 Log(logTypeDescription, tempString, assemblyName);
         }
 
