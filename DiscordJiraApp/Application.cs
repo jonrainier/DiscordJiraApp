@@ -26,6 +26,10 @@ namespace DiscordJiraApp
 
         private static string DiscordWebhookUrl { get; set; }
 
+        private static string DiscordUsername { get; set; }
+
+        private static string DiscordAvatarUrl { get; set; }
+
         private static int ListenerPort { get; set; }
 
         private static void Main(string[] args)
@@ -73,7 +77,9 @@ namespace DiscordJiraApp
                         {
                             "content",
                             $"```[{jiraPostModel.Issue.Key} ({jiraPostModel.Issue.Fields.Status.Name}) :: {jiraPostModel.Issue.Fields.Summary}]\r\n==========\r\n{jiraPostModel.User.Name} trigged a {jiraPostModel.IssueEventTypeName} event at {DateTime.UtcNow:F}```[Reference {jiraPostModel.Issue.Key}]({jiraPostModel.Issue.Fields.Status.IconUrl}browse/{jiraPostModel.Issue.Key})"
-                        }
+                        },
+                        {"avatar_url", DiscordAvatarUrl},
+                        {"username", DiscordUsername}
                     });
 
                     var httpContent = new StringContent(postValues, Encoding.UTF8, "application/json");
@@ -111,6 +117,12 @@ namespace DiscordJiraApp
                         break;
                     case "-discordWebhook":
                         DiscordWebhookUrl = clParam;
+                        break;
+                    case "-discordAvatarUrl":
+                        DiscordAvatarUrl = clParam;
+                        break;
+                    case "-discordUsername":
+                        DiscordUsername = clParam;
                         break;
                     case "-listenerPort":
                         ListenerPort = int.Parse(clParam);
